@@ -4,7 +4,7 @@
 	<groupId>com.test</groupId>
 	<artifactId>bootcontacts</artifactId>
 	<version>0.0.1</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

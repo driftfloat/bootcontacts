@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -21,7 +21,7 @@ public class ContactRepository {
 	public List<Contact> findAll(){
 		return jdbc.query(
 				"select id, firstName, lastName, phoneNumber, emailAddress " +
-				"from contacts order by lastName"
+				"from contacts order by id desc"
 				, new RowMapper<Contact>() {
 					@Override
 					public Contact mapRow(ResultSet rs, int rowNum) throws SQLException {
